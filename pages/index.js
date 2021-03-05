@@ -1,4 +1,15 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
+
+const myPageComponent = () => (
+  <Image src="/images/neko.jpg"
+    height={144}
+    width={144}
+    alt="my neko profile"
+  />
+)
+
 
 export default function Home() {
   return (
@@ -10,8 +21,9 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Read{' '} <Link href="/posts/first-posts">this page!</Link>
         </h1>
+        {myPageComponent()}
 
         <p className="description">
           Get started by editing <code>pages/index.js</code>
